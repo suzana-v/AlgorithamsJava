@@ -27,7 +27,7 @@ public class BitManipulationProblem {
 
         for (int day = 0; day < days; day++) {
 
-            int leftShift = (currentState << 1) & mask;
+            int leftShift = currentState << 1;
             int rightShift = currentState >>> 1;
 
             currentState = (leftShift ^ rightShift) & mask;
